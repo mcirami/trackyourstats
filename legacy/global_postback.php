@@ -71,13 +71,13 @@ if (isset($_POST["postback_url"]))
 					</p>
 					
 					<p>
-						<label class = "value_span9"><?php echo\LeadMax\TrackYourStats\System\Company::loadFromSession()->getShortHand(); ?> Vars</label>
+						<label class = "value_span9"><?php echo \LeadMax\TrackYourStats\System\Company::loadFromSession()->getShortHand(); ?> Vars</label>
 						<span>#affid#</span><br/>
 						<span>#user#</span><br/>
 						<span>#offid#</span> <br/>
 						<span>#clickid#</span> <br/>
 						
-						<span class = "small_txt value_span10"><?php echo\LeadMax\TrackYourStats\System\Company::loadFromSession()->getShortHand(); ?> vars are auto inputed into your URL if they're found.</span>
+						<span class = "small_txt value_span10"><?php echo \LeadMax\TrackYourStats\System\Company::loadFromSession()->getShortHand(); ?> vars are auto inputed into your URL if they're found.</span>
 						<span class = "small_txt value_span10">e.g. "google.com/?var1=<b>#affid#"</b> will translate to "google.com/?var1=<b>32</b>"</span>
 						
 						<br/>

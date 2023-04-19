@@ -5,7 +5,6 @@ $user = new \LeadMax\TrackYourStats\User\User;
 $company =  \LeadMax\TrackYourStats\System\Company::loadFromSession();
 $company->reloadSettings();
 
-
 //checks if the User is already logged in
 if ($user->is_loggedin())
 {
@@ -84,11 +83,7 @@ if($company->login_theme != '') {
 	<head>
 		<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8"/>
 		<meta name = "viewport" content = "width=device-width, initial-scale=1">
-		
-		
 		<link rel = "shortcut icon" type = "image/ico" href = "<?= \LeadMax\TrackYourStats\System\Company::loadFromSession()->getImgDir() ?>/favicon.ico"/>
-		<link rel = "shortcut icon" type = "image/ico" href = "<?= \LeadMax\TrackYourStats\System\Company::loadFromSession()->getImgDir() ?>/favicon.ico"/>
-		
 		<link rel = "stylesheet" type = "text/css" href = "<?php echo $webroot; ?>css/default.css"/>
 		<link rel = "stylesheet" media = "screen" type = "text/css"
 			  href = "<?php echo $webroot; ?>css/company.php"/>

@@ -9,11 +9,15 @@ COPYRIGHT 2012 ALL RIGHTS RESERVED
 
 function findProtocol()
 {
-    $protocol = "http://";
-
-    if (isset($_SERVER["SERVER_PORT"]) && $_SERVER["SERVER_PORT"] == 443) {
-        $protocol = "https://";
-    }
+	if (isset($_SERVER['HTTPS']) &&
+	    ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) ||
+	    isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&
+	    $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+		$protocol = 'https://';
+	}
+	else {
+		$protocol = 'http://';
+	}
 
     return $protocol;
 }

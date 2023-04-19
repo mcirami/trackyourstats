@@ -151,7 +151,7 @@ class Referrals
         $prep->bindParam(":user_id", $user_id);
 
         if ($prep->execute()) {
-            return $prep->fetch(PDO::FETCH_ASSOC)["referrer_user_id"];
+            return $prep->fetch(PDO::FETCH_ASSOC)["referrer_user_id"]  ?? '';
         }
 
         return false;

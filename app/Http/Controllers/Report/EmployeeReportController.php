@@ -64,7 +64,8 @@ class EmployeeReportController extends ReportController
     }
 
     public function index(Request $request)
-    {    
+    {
+
         switch (Session::userType()) {
             case Privilege::ROLE_GOD:
             case Privilege::ROLE_ADMIN:
