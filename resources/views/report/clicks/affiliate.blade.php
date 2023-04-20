@@ -15,6 +15,7 @@
             <tr>
                 @if (\LeadMax\TrackYourStats\System\Session::permissions()->can("view_fraud_data"))
                     <th class="value_span9">Click ID</th>
+                    <th class="value_span9">Click Hash</th>
                 @endif
                 <th class="value_span9">Timestamp</th>
                 <th class="value_span9">Offer Name</th>

@@ -189,6 +189,9 @@ class ClickRegistrationEvent extends URLEvent
 
         $encodedClickId = UID::encode($this->clickId);
 
+	    $click = new Click();
+	    $click->updateClickHash($this->clickId, $encodedClickId);
+
 
         $subVarReplacer = new SubVariables($this->subVarArray);
         $tysReplacer = new TYSVariables($user_id, $this->userData->user_name, $encodedClickId, $offer_id, $this->userData->referrer_repid,$this->adminId);

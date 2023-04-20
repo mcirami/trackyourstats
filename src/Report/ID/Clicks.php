@@ -129,7 +129,7 @@ class Clicks extends ReportBase
 
 
         if ($per->can("view_fraud_data")) {
-            $sql = "SELECT  clicks.idclicks, clicks.first_timestamp, offer.offer_name, conversions.timestamp, conversions.paid, click_vars.url,  click_geo.ip,  clicks.offer_idoffer FROM clicks
+            $sql = "SELECT  clicks.idclicks, clicks.click_hash, clicks.first_timestamp, offer.offer_name, conversions.timestamp, conversions.paid, click_vars.url,  click_geo.ip,  clicks.offer_idoffer FROM clicks
                     LEFT JOIN click_vars ON click_vars.click_id = clicks.idclicks
                     LEFT JOIN click_geo ON click_geo.click_id = clicks.idclicks
                      LEFT JOIN conversions ON conversions.click_id = clicks.idclicks  

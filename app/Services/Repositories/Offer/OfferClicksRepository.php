@@ -64,7 +64,8 @@ class OfferClicksRepository implements Repository
             'click_vars.url as query_string',
             'clicks.rep_idrep as affiliate_id',
             'clicks.offer_idoffer as offer_id',
-            'click_geo.ip as ip_address'
+            'click_geo.ip as ip_address',
+	        'clicks.click_hash'
         ]);
         return Click::select($select)
             ->leftJoin('click_vars', 'click_vars.click_id', 'clicks.idclicks')

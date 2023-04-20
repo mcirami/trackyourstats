@@ -70,6 +70,7 @@
                 <tr>
                     @if (\LeadMax\TrackYourStats\System\Session::permissions()->can("view_fraud_data"))
                         <th class="value_span9">Click ID</th>
+                        <th class="value_span9">Click Hash</th>
                     @endif
                     <th class="value_span9"><br>Timestamp</th>
                     <th class="value_span9">Conversion Timestamp</th>
@@ -97,6 +98,7 @@
                     <tr>
                         @if (\LeadMax\TrackYourStats\System\Session::permissions()->can("view_fraud_data"))
                             <td>{{$row['id']}}</td>
+                            <td>{{$row['click_hash']}}</td>
                         @endif
                         <td>{{$row['timestamp']}}</td>
                         <td>{{$row['conversion_timestamp']}}</td>

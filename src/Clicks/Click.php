@@ -51,6 +51,17 @@ class Click
         return $prep->execute();
     }
 
+    public static function updateClickHash($click_id, $click_hash)
+    {
+        $db = \LeadMax\TrackYourStats\Database\DatabaseConnection::getInstance();
+        $sql = "UPDATE clicks SET click_hash = :click_hash WHERE idclicks = :click_id";
+        $prep = $db->prepare($sql);
+        $prep->bindParam("click_hash", $click_hash);
+        $prep->bindParam(":click_id", $click_id);
+
+        return $prep->execute();
+    }
+
 
     public function __get($name)
     {
